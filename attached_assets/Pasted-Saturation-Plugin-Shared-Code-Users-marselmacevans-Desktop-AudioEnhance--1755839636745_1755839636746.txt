@@ -1,0 +1,36 @@
+Saturation Plugin - Shared Code
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp:34:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp:90:65 Too many arguments to function call, expected at most 3, have 5
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp:98:11 Unused variable 'drive'
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp:99:9 Unused variable 'satType'
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp:141:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp:152:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp:176:37 Comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp:179:23 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp:180:34 Implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp:29:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp:182:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp:187:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp:194:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp:208:30 Comparing floating point with == or != is unsafe
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp:208:45 Comparing floating point with == or != is unsafe
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp:208:61 Comparing floating point with == or != is unsafe
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp:208:77 Comparing floating point with == or != is unsafe

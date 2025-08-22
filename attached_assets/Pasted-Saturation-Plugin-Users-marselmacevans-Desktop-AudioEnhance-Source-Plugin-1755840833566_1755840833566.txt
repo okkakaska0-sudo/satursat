@@ -1,0 +1,62 @@
+Saturation Plugin
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.h
+Saturation Plugin - Shared Code
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.h
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.h:91:12 Redefinition of 'ComponentBounds'
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.h:104:21 Class member cannot be redeclared
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp:34:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp:89:11 Unused variable 'dashLength'
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp:140:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp:151:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/SaturationVisualization.cpp:178:23 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp:29:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp:182:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp:187:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp:194:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/DSP/SaturationProcessor.cpp
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/DSP/SaturationProcessor.cpp:62:17 Comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/DSP/SaturationProcessor.cpp:69:17 Comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/DSP/SaturationProcessor.h
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/DSP/SaturationProcessor.h:83:16 Unused variable 'numChannels'
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/DSP/SaturationProcessor.h:84:16 Unused variable 'numSamples'
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginProcessor.cpp
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginProcessor.cpp:196:24 Implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginProcessor.cpp:196:50 Implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginProcessor.cpp:197:25 Implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginProcessor.cpp:197:52 Implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginProcessor.cpp:241:25 Implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginProcessor.cpp:241:52 Implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginProcessor.cpp:242:26 Implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginProcessor.cpp:242:54 Implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginProcessor.cpp:321:31 Implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginProcessor.cpp:328:32 Implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginProcessor.cpp:335:32 Implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long')
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginProcessor.cpp:342:33 Implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long')

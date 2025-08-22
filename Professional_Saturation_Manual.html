@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Saturation Plugin - Руководство пользователя</title>
+    <style>
+        @page {
+            margin: 2cm;
+            size: A4;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+        }
+        
+        .cover {
+            text-align: center;
+            page-break-after: always;
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1e252e, #2a3441);
+            color: white;
+            margin: -20px -20px 40px -20px;
+            border-radius: 0;
+        }
+        
+        .cover h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .cover h2 {
+            font-size: 1.5em;
+            margin: 20px 0 40px 0;
+            color: #5fb3d4;
+        }
+        
+        .version-info {
+            margin-top: 60px;
+            font-size: 1.1em;
+            color: #f5f7fa;
+        }
+        
+        h1 {
+            color: #1e252e;
+            border-bottom: 3px solid #5fb3d4;
+            padding-bottom: 10px;
+            font-size: 2.2em;
+            margin-top: 40px;
+        }
+        
+        h2 {
+            color: #2a3441;
+            border-left: 4px solid #5fb3d4;
+            padding-left: 15px;
+            font-size: 1.8em;
+            margin-top: 35px;
+        }
+        
+        h3 {
+            color: #3e4a59;
+            font-size: 1.4em;
+            margin-top: 25px;
+        }
+        
+        h4 {
+            color: #5fb3d4;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #5fb3d4;
+            margin: 30px 0;
+            page-break-inside: avoid;
+        }
+        
+        .toc h2 {
+            margin-top: 0;
+            border: none;
+            padding: 0;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            padding: 5px 0;
+            border-bottom: 1px dotted #ddd;
+        }
+        
+        .toc a {
+            text-decoration: none;
+            color: #2a3441;
+        }
+        
+        .toc a:hover {
+            color: #5fb3d4;
+        }
+        
+        .feature-box {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .feature-box h4 {
+            margin-top: 0;
+            color: #5fb3d4;
+        }
+        
+        .algorithm-card {
+            background: white;
+            border: 2px solid #5fb3d4;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .algorithm-card h3 {
+            color: #1e252e;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        
+        .technical-specs {
+            background: #f1f3f4;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .usage-tip {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .warning-box {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .parameter-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .parameter-table th,
+        .parameter-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .parameter-table th {
+            background: #5fb3d4;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .parameter-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .color-scheme {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .color-box {
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        .green { background: #28a745; }
+        .yellow { background: #ffc107; }
+        .red { background: #dc3545; }
+        
+        ul, ol {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        code {
+            background: #f1f3f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+        
+        .no-break {
+            page-break-inside: avoid;
+        }
+        
+        @media print {
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+            
+            .cover {
+                margin: -20px;
+            }
+            
+            h1 { font-size: 18pt; }
+            h2 { font-size: 16pt; }
+            h3 { font-size: 14pt; }
+            h4 { font-size: 12pt; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cover">
+    <h1>PROFESSIONAL SATURATION PLUGIN</h1>
+    <h2>Руководство пользователя</h2>
+    <div class="version-info">
+        <p><strong>Версия:</strong> 1.0</p>
+        <p><strong>Совместимость:</strong> JUCE 8.0.8, macOS, Xcode 16.2</p>
+        <p><strong>Форматы плагина:</strong> VST3, AudioUnit</p>
+        <p><strong>Год:</strong> 2025</p>
+    </div>
+</div>
+
+<div class="toc">
+    <h2>ОГЛАВЛЕНИЕ</h2>
+    <ul>
+        <li><a href="#overview">1. Общее описание</a></li>
+        <li><a href="#algorithms">2. Алгоритмы сатурации</a></li>
+        <li><a href="#controls">3. Основные элементы управления</a></li>
+        <li><a href="#filters">4. Линейно-фазовые фильтры</a></li>
+        <li><a href="#eq">5. Адаптивный эквалайзер</a></li>
+        <li><a href="#visualization">6. Визуализация и метры</a></li>
+        <li><a href="#loudness">7. Компенсация громкости</a></li>
+        <li><a href="#settings">8. Настройки и параметры</a></li>
+        <li><a href="#tips">9. Советы по использованию</a></li>
+    </ul>
+</div>
+
+<div class="page-break"></div>
+
+<h1 id="overview">1. ОБЩЕЕ ОПИСАНИЕ</h1>
+
+<div class="feature-box">
+    <p><strong>Professional Saturation Plugin</strong> — это высококачественный плагин для профессиональной обработки звука, предназначенный для добавления аналогового тепла и характера к цифровому аудио. Плагин использует современные алгоритмы DSP и предлагает пять различных типов сатурации с интеллектуальной адаптивной эквализацией.</p>
+</div>
+
+<h3>Ключевые особенности:</h3>
+<ul>
+    <li><strong>5 профессиональных алгоритмов сатурации</strong> с точным моделированием аналоговых схем</li>
+    <li><strong>Адаптивный эквалайзер</strong> с FFT-анализом в реальном времени</li>
+    <li><strong>Линейно-фазовые фильтры</strong> для предотвращения алиасинга</li>
+    <li><strong>Визуализация кривой сатурации</strong> в реальном времени</li>
+    <li><strong>Точные VU-метры</strong> входного и выходного сигнала</li>
+    <li><strong>Автоматическая компенсация громкости</strong> для прозрачного байпаса</li>
+    <li><strong>Масштабируемый интерфейс</strong> с профессиональным дизайном</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h1 id="algorithms">2. АЛГОРИТМЫ САТУРАЦИИ</h1>
+
+<div class="algorithm-card">
+    <h3>1. TUBE WARM - Ламповое тепло</h3>
+    <p><strong>Назначение:</strong> Эмуляция многокаскадных ламповых триодов</p>
+    
+    <div class="technical-specs">
+        <h4>Технические особенности:</h4>
+        <ul>
+            <li>Трёхстадийная компрессия с асимметричной передаточной функцией</li>
+            <li>Генерация четных гармоник, характерных для триодов</li>
+            <li>Симуляция выходного трансформатора с гистерезисом</li>
+            <li>Моделирование области отсечки лампы</li>
+        </ul>
+    </div>
+    
+    <div class="usage-tip">
+        <strong>Применение:</strong> Идеально для вокала, гитар, барабанов. Придает тёплый, музыкальный характер.
+    </div>
+</div>
+
+<div class="algorithm-card">
+    <h3>2. TAPE CLASSIC - Классическая лента</h3>
+    <p><strong>Назначение:</strong> Продвинутое моделирование магнитной ленты</p>
+    
+    <div class="technical-specs">
+        <h4>Технические особенности:</h4>
+        <ul>
+            <li>Магнитный гистерезис с симуляцией bias</li>
+            <li>Эффекты wow/flutter</li>
+            <li>Моделирование зазора магнитной головки</li>
+            <li>Частотно-зависимые потери</li>
+        </ul>
+    </div>
+    
+    <div class="usage-tip">
+        <strong>Применение:</strong> Отлично для микса в целом, добавляет винтажную окраску и сплочённость.
+    </div>
+</div>
+
+<div class="algorithm-card">
+    <h3>3. TRANSISTOR MODERN - Современный транзистор</h3>
+    <p><strong>Назначение:</strong> Высококачественные твердотельные усилители</p>
+    
+    <div class="technical-specs">
+        <h4>Технические особенности:</h4>
+        <ul>
+            <li>Искажения кроссовера класса AB</li>
+            <li>Отрицательная обратная связь</li>
+            <li>Расширенная высокочастотная характеристика</li>
+            <li>Линейная область работы</li>
+        </ul>
+    </div>
+    
+    <div class="usage-tip">
+        <strong>Применение:</strong> Универсальный выбор для современного звучания, сохраняет чёткость.
+    </div>
+</div>
+
+<div class="algorithm-card">
+    <h3>4. DIODE HARSH - Жёсткий диод</h3>
+    <p><strong>Назначение:</strong> Профессиональные диодные клипперы</p>
+    
+    <div class="technical-specs">
+        <h4>Технические особенности:</h4>
+        <ul>
+            <li>Экспоненциальные диодные характеристики (уравнение Шокли)</li>
+            <li>Асимметричное клиппирование (кремний/германий)</li>
+            <li>Симуляция насыщения операционного усилителя</li>
+            <li>Температурная зависимость</li>
+        </ul>
+    </div>
+    
+    <div class="usage-tip">
+        <strong>Применение:</strong> Для агрессивного звучания, электронной музыки, спецэффектов.
+    </div>
+</div>
+
+<div class="algorithm-card">
+    <h3>5. VINTAGE FUZZ - Винтажный фузз</h3>
+    <p><strong>Назначение:</strong> Моделирование германиевых фузз-педалей</p>
+    
+    <div class="technical-specs">
+        <h4>Технические особенности:</h4>
+        <ul>
+            <li>Моделирование цепи Fuzz Face с германиевыми транзисторами</li>
+            <li>Температурная нестабильность и утечки коллектор-база</li>
+            <li>Интермодуляционные искажения между каскадами</li>
+            <li>Динамическое изменение характеристик</li>
+        </ul>
+    </div>
+    
+    <div class="usage-tip">
+        <strong>Применение:</strong> Для винтажного рок-звучания, гитарных соло, креативных эффектов.
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<h1 id="controls">3. ОСНОВНЫЕ ЭЛЕМЕНТЫ УПРАВЛЕНИЯ</h1>
+
+<table class="parameter-table">
+    <thead>
+        <tr>
+            <th>Параметр</th>
+            <th>Диапазон</th>
+            <th>Функция</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>INPUT</strong></td>
+            <td>-40 до +40 дБ</td>
+            <td>Управление уровнем входного сигнала перед обработкой</td>
+        </tr>
+        <tr>
+            <td><strong>DRIVE</strong></td>
+            <td>0 до +30 дБ</td>
+            <td>Основной параметр интенсивности сатурации</td>
+        </tr>
+        <tr>
+            <td><strong>MIX</strong></td>
+            <td>0 до 100%</td>
+            <td>Соотношение между обработанным и сухим сигналом</td>
+        </tr>
+        <tr>
+            <td><strong>OUTPUT</strong></td>
+            <td>-40 до +40 дБ</td>
+            <td>Финальная коррекция уровня выходного сигнала</td>
+        </tr>
+        <tr>
+            <td><strong>SOLO SAT</strong></td>
+            <td>Вкл/Выкл</td>
+            <td>Изолированное прослушивание только сатурации</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="feature-box">
+    <h4>INPUT (-40 до +40 дБ)</h4>
+    <ul>
+        <li>Позволяет оптимизировать уровень для алгоритмов сатурации</li>
+        <li>Влияет на характер искажений</li>
+        <li>Диапазон ±40 дБ обеспечивает гибкость настройки</li>
+    </ul>
+</div>
+
+<div class="feature-box">
+    <h4>DRIVE (0 до +30 дБ)</h4>
+    <ul>
+        <li>Определяет степень нелинейных искажений</li>
+        <li>Каждый алгоритм реагирует по-разному</li>
+        <li>Интерактивная связь с визуализацией кривой</li>
+    </ul>
+</div>
+
+<div class="feature-box">
+    <h4>MIX (0 до 100%)</h4>
+    <ul>
+        <li>0% = только сухой сигнал</li>
+        <li>100% = только обработанный сигнал</li>
+        <li>Параллельная обработка для сохранения динамики</li>
+    </ul>
+</div>
+
+<div class="page-break"></div>
+
+<h1 id="filters">4. ЛИНЕЙНО-ФАЗОВЫЕ ФИЛЬТРЫ</h1>
+
+<div class="feature-box">
+    <h4>Назначение</h4>
+    <p>Предотвращение алиасинга и нежелательных частотных артефактов при обработке.</p>
+</div>
+
+<h3>LOW CUT (20 - 500 Гц)</h3>
+<div class="technical-specs">
+    <ul>
+        <li>Высокочастотный линейно-фазовый FIR-фильтр</li>
+        <li>Удаляет низкочастотные румблы</li>
+        <li>Не вносит фазовых искажений</li>
+        <li>Высокий порядок фильтра (511 коэффициентов)</li>
+        <li>Применяется окно Блэкмана для оптимальной частотной характеристики</li>
+    </ul>
+</div>
+
+<h3>HIGH CUT (5 - 20 кГц)</h3>
+<div class="technical-specs">
+    <ul>
+        <li>Низкочастотный линейно-фазовый FIR-фильтр</li>
+        <li>Предотвращает алиасинг при сатурации</li>
+        <li>Окно Кайзера для превосходного подавления в полосе заграждения</li>
+        <li>Сохраняет фазовые соотношения</li>
+    </ul>
+</div>
+
+<div class="usage-tip">
+    <strong>ENABLE (Кнопка):</strong> Позволяет сравнить звучание с фильтрами и без. В большинстве случаев рекомендуется оставлять включенным.
+</div>
+
+<div class="page-break"></div>
+
+<h1 id="eq">5. АДАПТИВНЫЙ ЭКВАЛАЙЗЕР</h1>
+
+<div class="feature-box">
+    <h4>Принцип работы</h4>
+    <p>Система анализирует входящий спектр в реальном времени с помощью FFT и автоматически корректирует 8 частотных полос для достижения целевой кривой.</p>
+</div>
+
+<h3>Частотные полосы</h3>
+<table class="parameter-table">
+    <thead>
+        <tr>
+            <th>Частота</th>
+            <th>Область</th>
+            <th>Назначение</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>80 Гц</td><td>Низкие басы</td><td>Фундамент звучания</td></tr>
+        <tr><td>200 Гц</td><td>Басы</td><td>Тело звука</td></tr>
+        <tr><td>500 Гц</td><td>Низкие средние</td><td>Полнота звучания</td></tr>
+        <tr><td>1.2 кГц</td><td>Средние</td><td>Основная энергия</td></tr>
+        <tr><td>3 кГц</td><td>Верхние средние</td><td>Разборчивость</td></tr>
+        <tr><td>6 кГц</td><td>Присутствие</td><td>Атака, артикуляция</td></tr>
+        <tr><td>12 кГц</td><td>Высокие</td><td>Яркость, детали</td></tr>
+        <tr><td>16 кГц</td><td>Воздух</td><td>Пространство, открытость</td></tr>
+    </tbody>
+</table>
+
+<h3>Целевые кривые</h3>
+
+<div class="algorithm-card">
+    <h4>FLAT</h4>
+    <ul>
+        <li>Нейтральная характеристика</li>
+        <li>Минимальная коррекция</li>
+        <li>Сохраняет исходный тональный баланс</li>
+    </ul>
+</div>
+
+<div class="algorithm-card">
+    <h4>MUSICAL</h4>
+    <ul>
+        <li>Лёгкий подъём басов (+2 дБ на 80 Гц)</li>
+        <li>Небольшое понижение в области 1.2 кГц (-1 дБ)</li>
+        <li>Подъём воздуха (+3 дБ на 16 кГц)</li>
+        <li>Универсальна для музыкального материала</li>
+    </ul>
+</div>
+
+<div class="algorithm-card">
+    <h4>PRESENCE</h4>
+    <ul>
+        <li>Акцент на речевой разборчивости</li>
+        <li>Подъём в области 1.2-3 кГц (+2-3 дБ)</li>
+        <li>Идеально для вокала и речи</li>
+    </ul>
+</div>
+
+<div class="algorithm-card">
+    <h4>WARM</h4>
+    <ul>
+        <li>Тёплое звучание с подъёмом басов</li>
+        <li>Постепенное понижение высоких частот</li>
+        <li>Создаёт уютную, тёплую атмосферу</li>
+    </ul>
+</div>
+
+<div class="algorithm-card">
+    <h4>BRIGHT</h4>
+    <ul>
+        <li>Яркое, детальное звучание</li>
+        <li>Понижение басов (-2 дБ)</li>
+        <li>Подъём высоких частот (до +4 дБ на 12 кГц)</li>
+    </ul>
+</div>
+
+<h3>Параметры управления</h3>
+
+<table class="parameter-table">
+    <thead>
+        <tr>
+            <th>Параметр</th>
+            <th>Диапазон</th>
+            <th>Функция</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>STRENGTH</strong></td>
+            <td>0-100%</td>
+            <td>Интенсивность адаптивной коррекции</td>
+        </tr>
+        <tr>
+            <td><strong>SPEED</strong></td>
+            <td>10-1000 мс</td>
+            <td>Скорость реакции системы</td>
+        </tr>
+        <tr>
+            <td><strong>ENABLE</strong></td>
+            <td>Вкл/Выкл</td>
+            <td>Включение/отключение адаптивного эквалайзера</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<h1 id="visualization">6. ВИЗУАЛИЗАЦИЯ И МЕТРЫ</h1>
+
+<h3>Кривая сатурации</h3>
+<div class="feature-box">
+    <h4>Отображение</h4>
+    <p>Графическое представление передаточной функции сатурации</p>
+    
+    <ul>
+        <li><strong>Ось X:</strong> Входной уровень (±2.0)</li>
+        <li><strong>Ось Y:</strong> Выходной уровень (±2.0)</li>
+        <li><strong>Пунктирная линия:</strong> Линейная передача (без искажений)</li>
+        <li><strong>Цветная кривая:</strong> Реальная передаточная функция</li>
+        <li><strong>Обновление:</strong> В реальном времени при изменении параметров</li>
+    </ul>
+</div>
+
+<div class="technical-specs">
+    <h4>Интерпретация кривой:</h4>
+    <ul>
+        <li>Прямая линия = линейная передача</li>
+        <li>S-образная кривая = мягкое ограничение</li>
+        <li>Резкие изломы = жёсткое клиппирование</li>
+        <li>Асимметрия = разные искажения для положительной и отрицательной полуволн</li>
+    </ul>
+</div>
+
+<h3>VU-метры</h3>
+
+<div class="feature-box">
+    <h4>Характеристики метров:</h4>
+    <ul>
+        <li>Стерео отображение (L/R)</li>
+        <li>Диапазон: -60 до +6 дБ</li>
+        <li>RMS значения с цветовой индикацией</li>
+        <li>Peak hold индикаторы</li>
+        <li>Точное цифровое отображение в дБ</li>
+    </ul>
+</div>
+
+<h4>Цветовая схема метров:</h4>
+<div class="color-scheme">
+    <div class="color-box green"></div><strong>Зелёный:</strong> Нормальный уровень (-∞ до -18 дБ)<br>
+    <div class="color-box yellow"></div><strong>Жёлтый:</strong> Внимание (-18 до -6 дБ)<br>
+    <div class="color-box red"></div><strong>Красный:</strong> Опасность перегрузки (-6 дБ и выше)
+</div>
+
+<h3>Дисплей адаптивного эквалайзера</h3>
+<div class="technical-specs">
+    <h4>Элементы визуализации:</h4>
+    <ul>
+        <li><strong>Серая область:</strong> Текущий спектр входного сигнала</li>
+        <li><strong>Пунктирная линия:</strong> Целевая кривая</li>
+        <li><strong>Цветная линия:</strong> Текущая коррекция эквалайзера</li>
+        <li><strong>Точки:</strong> Центральные частоты 8 полос</li>
+    </ul>
+</div>
+
+<div class="page-break"></div>
+
+<h1 id="loudness">7. КОМПЕНСАЦИЯ ГРОМКОСТИ</h1>
+
+<div class="feature-box">
+    <h4>Назначение</h4>
+    <p>Автоматическая компенсация изменений громкости для обеспечения прозрачного сравнения между обработанным и необработанным сигналом.</p>
+</div>
+
+<h3>Принцип работы</h3>
+<ol>
+    <li><strong>Анализ входного сигнала:</strong> Измерение перцептивной громкости с K-взвешиванием</li>
+    <li><strong>Анализ выходного сигнала:</strong> Аналогичное измерение после обработки</li>
+    <li><strong>Расчёт компенсации:</strong> Определение необходимой коррекции</li>
+    <li><strong>Применение:</strong> Плавное изменение выходного уровня</li>
+</ol>
+
+<div class="technical-specs">
+    <h4>Технические детали:</h4>
+    <ul>
+        <li><strong>K-взвешивание:</strong> Приближение к стандарту измерения громкости</li>
+        <li><strong>Время интеграции:</strong> 400 мс для стабильных измерений</li>
+        <li><strong>Диапазон компенсации:</strong> ±12 дБ</li>
+        <li><strong>Сглаживание:</strong> Баллистические фильтры для музыкальности</li>
+    </ul>
+</div>
+
+<div class="usage-tip">
+    <h4>Влияние на звук:</h4>
+    <ul>
+        <li>Позволяет объективно оценивать качество обработки</li>
+        <li>Предотвращает "эффект громче = лучше"</li>
+        <li>Сохраняет музыкальную динамику</li>
+        <li>Обеспечивает профессиональный workflow</li>
+    </ul>
+</div>
+
+<div class="page-break"></div>
+
+<h1 id="settings">8. НАСТРОЙКИ И ПАРАМЕТРЫ</h1>
+
+<h3>Автоматизация параметров</h3>
+<p>Все параметры плагина поддерживают автоматизацию в DAW:</p>
+
+<table class="parameter-table">
+    <thead>
+        <tr>
+            <th>Категория</th>
+            <th>Параметры</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Основные</strong></td>
+            <td>Input Gain, Drive, Mix, Output Gain, Saturation Type</td>
+        </tr>
+        <tr>
+            <td><strong>Фильтры</strong></td>
+            <td>Low Cut Frequency, High Cut Frequency, Filters Enable</td>
+        </tr>
+        <tr>
+            <td><strong>Эквалайзер</strong></td>
+            <td>EQ Enable, Target Curve, Adaption Strength, Reaction Speed</td>
+        </tr>
+        <tr>
+            <td><strong>Специальные</strong></td>
+            <td>Solo Saturation</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Сохранение пресетов</h3>
+<div class="feature-box">
+    <p>Плагин сохраняет все настройки в проекте DAW автоматически. Состояние включает:</p>
+    <ul>
+        <li>Все значения параметров</li>
+        <li>Внутренние состояния алгоритмов</li>
+        <li>Настройки интерфейса</li>
+    </ul>
+</div>
+
+<h3>Совместимость</h3>
+<table class="parameter-table">
+    <thead>
+        <tr>
+            <th>Характеристика</th>
+            <th>Поддержка</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Форматы</strong></td>
+            <td>VST3, AudioUnit (AU)</td>
+        </tr>
+        <tr>
+            <td><strong>Системы</strong></td>
+            <td>macOS (компиляция под macOS)</td>
+        </tr>
+        <tr>
+            <td><strong>DAW</strong></td>
+            <td>Все современные цифровые аудио станции</td>
+        </tr>
+        <tr>
+            <td><strong>Разрядность</strong></td>
+            <td>32-bit float обработка</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<h1 id="tips">9. СОВЕТЫ ПО ИСПОЛЬЗОВАНИЮ</h1>
+
+<h3>Оптимальный workflow</h3>
+
+<div class="no-break">
+<h4>1. Настройка входного уровня</h4>
+<div class="usage-tip">
+    <ul>
+        <li>Установите INPUT так, чтобы VU-метр показывал -18 до -12 дБ</li>
+        <li>Для более агрессивной сатурации увеличьте входной уровень</li>
+        <li>Следите за перегрузкой (красная зона)</li>
+    </ul>
+</div>
+</div>
+
+<div class="no-break">
+<h4>2. Выбор типа сатурации</h4>
+<table class="parameter-table">
+    <thead>
+        <tr>
+            <th>Тип</th>
+            <th>Рекомендуемое применение</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td><strong>Tube Warm</strong></td><td>Для тёплого, музыкального звучания</td></tr>
+        <tr><td><strong>Tape Classic</strong></td><td>Для винтажной склейки микса</td></tr>
+        <tr><td><strong>Transistor Modern</strong></td><td>Для чистого, современного характера</td></tr>
+        <tr><td><strong>Diode Harsh</strong></td><td>Для агрессивных, электронных звуков</td></tr>
+        <tr><td><strong>Vintage Fuzz</strong></td><td>Для креативных, винтажных эффектов</td></tr>
+    </tbody>
+</table>
+</div>
+
+<div class="no-break">
+<h4>3. Настройка Drive</h4>
+<div class="technical-specs">
+    <ul>
+        <li>Начинайте с небольших значений (2-5 дБ)</li>
+        <li>Используйте визуализацию для понимания характера искажений</li>
+        <li>SOLO SAT поможет услышать только добавленные искажения</li>
+    </ul>
+</div>
+</div>
+
+<div class="no-break">
+<h4>4. Работа с MIX</h4>
+<div class="usage-tip">
+    <ul>
+        <li>100% не всегда лучше</li>
+        <li>Параллельная обработка (50-80%) часто звучит музыкальнее</li>
+        <li>Экспериментируйте с различными соотношениями</li>
+    </ul>
+</div>
+</div>
+
+<div class="no-break">
+<h4>5. Использование адаптивного эквалайзера</h4>
+<div class="technical-specs">
+    <ul>
+        <li>Включайте после настройки сатурации</li>
+        <li>Начинайте с Strength 30-50%</li>
+        <li>Выбирайте целевую кривую в зависимости от материала</li>
+        <li>Скорость 100-300 мс подходит для большинства случаев</li>
+    </ul>
+</div>
+</div>
+
+<h3>Рекомендации по жанрам</h3>
+
+<table class="parameter-table">
+    <thead>
+        <tr>
+            <th>Жанр</th>
+            <th>Тип</th>
+            <th>Drive</th>
+            <th>EQ</th>
+            <th>Mix</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Рок/Метал</strong></td>
+            <td>Diode Harsh / Tube Warm</td>
+            <td>5-15 дБ</td>
+            <td>Musical / Presence</td>
+            <td>70-100%</td>
+        </tr>
+        <tr>
+            <td><strong>Электронная</strong></td>
+            <td>Transistor Modern / Diode Harsh</td>
+            <td>3-10 дБ</td>
+            <td>Bright</td>
+            <td>50-80%</td>
+        </tr>
+        <tr>
+            <td><strong>Джаз/Блюз</strong></td>
+            <td>Tube Warm / Tape Classic</td>
+            <td>2-8 дБ</td>
+            <td>Warm / Musical</td>
+            <td>30-60%</td>
+        </tr>
+        <tr>
+            <td><strong>Поп/R&B</strong></td>
+            <td>Tape Classic / Transistor Modern</td>
+            <td>3-7 дБ</td>
+            <td>Musical / Presence</td>
+            <td>40-70%</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Устранение неполадок</h3>
+
+<div class="warning-box">
+    <h4>Цифровые артефакты</h4>
+    <ul>
+        <li>Проверьте включение фильтров</li>
+        <li>Уменьшите входной уровень</li>
+        <li>Снизьте Drive</li>
+    </ul>
+</div>
+
+<div class="usage-tip">
+    <h4>Слишком тёмное звучание</h4>
+    <ul>
+        <li>Отрегулируйте High Cut фильтр</li>
+        <li>Используйте EQ кривую Bright</li>
+        <li>Увеличьте EQ Strength</li>
+    </ul>
+</div>
+
+<div class="technical-specs">
+    <h4>Неестественное звучание</h4>
+    <ul>
+        <li>Уменьшите Drive</li>
+        <li>Используйте параллельную обработку (MIX < 100%)</li>
+        <li>Попробуйте другой тип сатурации</li>
+    </ul>
+</div>
+
+<div class="warning-box">
+    <h4>Проблемы с громкостью</h4>
+    <ul>
+        <li>Компенсация громкости работает автоматически</li>
+        <li>При необходимости отрегулируйте OUTPUT</li>
+        <li>Проверьте уровни на VU-метрах</li>
+    </ul>
+</div>
+
+<div class="page-break"></div>
+
+<h1>ЗАКЛЮЧЕНИЕ</h1>
+
+<div class="feature-box">
+    <p><strong>Professional Saturation Plugin</strong> представляет собой современный инструмент для профессиональной обработки звука, сочетающий в себе точное моделирование классических аналоговых схем с передовыми цифровыми технологиями.</p>
+    
+    <p>Уникальная комбинация пяти алгоритмов сатурации, адаптивного эквалайзера и интеллектуальной компенсации громкости делает этот плагин универсальным решением для любых задач звукообработки.</p>
+    
+    <p>Тщательно спроектированный интерфейс и профессиональные инструменты визуализации обеспечивают интуитивное управление и точный контроль над процессом обработки. Плагин одинаково хорошо подходит как для тонкой тональной коррекции, так и для создания ярких творческих эффектов.</p>
+</div>
+
+<div class="technical-specs" style="text-align: center; margin-top: 40px;">
+    <p><strong>Версия руководства:</strong> 1.0<br>
+    <strong>Дата:</strong> 2025<br>
+    <strong>Совместимость:</strong> JUCE 8.0.8, macOS, Xcode 16.2</p>
+</div>
+
+</body>
+</html>

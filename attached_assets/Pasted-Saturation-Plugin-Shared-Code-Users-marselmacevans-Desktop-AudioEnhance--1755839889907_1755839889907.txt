@@ -1,0 +1,29 @@
+Saturation Plugin - Shared Code
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.cpp
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.cpp:37:24 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.cpp:44:36 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.cpp:49:32 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.cpp:54:28 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.cpp:59:37 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.cpp:221:1 Unknown type name 'ComponentBounds'; did you mean 'ComponentBuilder'?
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.cpp:221:61 Return type of out-of-line definition of 'ProfessionalSaturationAudioProcessorEditor::calculateLayout' differs from that in the declaration
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.cpp:266:12 No viable conversion from returned value of type 'ComponentBounds' to function return type 'ComponentBuilder'
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.cpp:339:86 Declaration shadows a static data member of 'ProfessionalSaturationAudioProcessorEditor'
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/PluginEditor.cpp:339:101 Declaration shadows a static data member of 'ProfessionalSaturationAudioProcessorEditor'
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp:29:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/Components/VUMeter.cpp:182:15 'Font' is deprecated: Use the constructor that takes a FontOptions argument
+
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/DSP/LinearPhaseFilters.h
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance резерв/Source/DSP/LinearPhaseFilters.h:48:16 Declaration shadows a static data member of 'LinearPhaseFilters'
